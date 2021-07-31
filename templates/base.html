@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type=text/css rel="stylesheet" href="{{ url_for( 'static', filename='style.css') }}">
+    
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+
+<script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+
+    <title>{% block title %}Home{% endblock %}</title>
+
+  </head>
+  <body>
+    <center>
+    <div id="body">
+        <h1>Fin-<span>IO</span></h1>
+        <h3>Automated Stock Prediction System,<br> equiped with Voice Recognition</h3>
+    </div>
+    <!-- <div id=chart>
+      <canvas id="line-chart" width="800" height="450"></canvas>
+      <script>
+      new Chart(document.getElementById("line-chart"), {
+        type: 'line',
+        data: {
+          labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+          datasets: [{ 
+              data: [86,114,106,106,107,111,133,221,783,2478,5000,6000,221,783,2478,5000,6000],
+              label: "Nasdaq:AAPL",
+              borderColor: "#3e95cd",
+              fill: false
+            }, { 
+              data: [282,350,411,502,635,809,947,1402,3700,5267,4000,3500],
+              label: "NYSE:A",
+              borderColor: "#8e5ea2",
+              fill: false
+            }, { 
+              data: [168,170,178,190,203,276,408,547,675,734,220,600],
+              label: "NASDAQ:MSFT",
+              borderColor: "#3cba9f",
+              fill: false
+            }, { 
+              data: [40,20,10,16,24,38,74,167,508,784,700,3000],
+              label: "NASDAQ:GOOG",
+              borderColor: "#e8c3b9",
+              fill: false
+            }, { 
+              data: [6,3,2,2,7,26,82,172,312,433,250,500],
+              label: "NASDAQ:AMZN",
+              borderColor: "#c45850",
+              fill: false
+            }
+          ]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'World population per region (in millions)'
+          },
+          scales: {
+            x: {
+                type: 'timeseries',
+            }
+        }
+      }});
+      </script>
+
+    </div> -->
+
+    <div id='form'>
+      <form method="POST">
+        <label for="fname">Income</label>
+        <input type="text" id="time" name="time" placeholder="time">
+    
+        <label for="lname">Amount planning to Invest</label>
+        <input type="text" id="investment" name="investment" placeholder="Investment">
+    
+        <label for="risk">Risk</label>
+        <select id="risk" name="risk">
+          <option value="High Risk">High Risk</option>
+          <option value="Moderate Risk">Moderate Risk</option>
+          <option value="Low Risk">Low Risk</option>
+          <option value="Very Low Risk">Very Low Risk</option>
+        </select>
+      
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </center>
+  </body>
+</html>
