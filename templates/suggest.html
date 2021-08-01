@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='suggest.css') }}">
-    <title>{% block title %}Suggestions {% endblock %}</title>
-</head>
-<body>
-    <center>
-        <h1>Your Recommended Portfolio </h1>
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Your Recommended Portfolio </h1>
     <table id="table">
         <tr>
           <th>Symbol</th>
           <th>Name</th>
           <th>Asset class</th>
-          <th>Price(USD)</th>
+          <th>Price(CAD)</th>
           <th># of Shares</th>
-          <th>Total Amount(USD)</th>
+          <th>Total Amount(CAD)</th>
         </tr>
         {% for row in data %}
         <tr>
@@ -29,7 +21,5 @@
           <td>{{ row['price']*row['_shares'] }}</td>
         </tr>
         {% endfor %} 
-      </table>
-    </center> 
-</body>
-</html>
+    </table>
+{% endblock %}

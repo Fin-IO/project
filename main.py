@@ -20,7 +20,7 @@ def init():
         return render_template("suggest.html",data=data)
 
     else:
-        return render_template("base.html")
+        return render_template("input.html")
 
 app.run(host='0.0.0.0',port=5000,debug=True)
 
