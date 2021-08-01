@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class=chart>
+    <canvas id="line-chart" width="800" height="450"></canvas>
+    <script>
+    new Chart(document.getElementById("line-chart"), {
+      type: 'line',
+      data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        datasets: [{ 
+            data: [86,114,106,106,107,111,133,221,783,2478,5000,6000,221,783,2478,5000,6000],
+            label: "VCN.TO",
+            borderColor: "#3e95cd",
+            fill: false
+          }, { 
+            data: [282,350,411,502,635,809,947,1402,3700,5267,4000,3500],
+            label: "VUN.TO",
+            borderColor: "#8e5ea2",
+            fill: false
+          }, { 
+            data: [168,170,178,190,203,276,408,547,675,734,220,600],
+            label: "VIU.TO",
+            borderColor: "#3cba9f",
+            fill: false
+          }, { 
+            data: [40,20,10,16,24,38,74,167,508,784,700,3000],
+            label: "VEE.TO",
+            borderColor: "#e8c3b9",
+            fill: false
+          }, { 
+            data: [6,3,2,2,7,26,82,172,312,433,250,500],
+            label: "VBU.TO",
+            borderColor: "#c45850",
+            fill: false
+          }, { 
+            data: [1,2,4,8,16,32,64,128,256,512,1024,2048,4096],
+            label: "VBG.TO",
+            borderColor: "#e4h6h2",
+            fill: false
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'ETF and Bond Price History'
+        },
+        scales: {
+          x: {
+              type: 'timeseries',
+          }
+      }
+    }});
+    </script>
+</div>
+{% endblock %}

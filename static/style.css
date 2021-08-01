@@ -13,7 +13,7 @@
     text-align: center;
 }
 
-#chart
+.chart
 {
     max-height: 1000px;
     max-width: 1000px;
