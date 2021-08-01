@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 body{
     background-image: "{{ url_for( 'static', filename='bg.webp') }}";
 }
