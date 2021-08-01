@@ -13,8 +13,8 @@ def init():
         time = request.form.get('time')
         risk = request.form.get('risk')
         print(investment,time,risk)
-
-        return render_template("suggest.html")
+        data=[{"symbol":'FB',"name":"Facebook","asset":"equity","price":45,"_shares":4},{"symbol":'FB',"name":"Facebook","asset":"equity","price":45,"_shares":4},{"symbol":'FB',"name":"Facebook","asset":"equity","price":45,"_shares":4}]
+        return render_template("suggest.html",data=data)
 
     else:
         return render_template("base.html")
