@@ -7,13 +7,13 @@
           <th>Symbol</th>
           <th>Name</th>
           <th>Asset class</th>
-          <th>Price(CAD)</th>
+          <th>Price (CAD)</th>
           <th># of Shares</th>
-          <th>Total Amount(CAD)</th>
+          <th>Total Amount (CAD)</th>
         </tr>
         {% for row in data %}
         <tr>
-          <td><a href="/graph/v">{{ row['symbol'] }}</a></td>
+          <td><a>{{ row['symbol'] }}</a></td>
           <td>{{ row['name'] }}</td>
           <td>{{ row['asset'] }}</td>
           <td>{{ row['price'] }}</td>
@@ -22,4 +22,7 @@
         </tr>
         {% endfor %} 
     </table>
+    <div href="/graph/v" class="viewGraph">
+      <a href="/graph/v">View Graph</a>
+    </div>
 {% endblock %}

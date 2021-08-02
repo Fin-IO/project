@@ -82,8 +82,30 @@ input[type=text], select {
     color: white;
   }
 
+  .viewGraph {
+    width: 100px;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 30px 0 0 0;
+    border: none;
+    border-radius: 4px;
+  }
 
+  .viewGraph a:active {
+    text-decoration: none;
+    color: white;
+  }
 
+  .viewGraph a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  .viewGraph a {
+    text-decoration: none;
+    color: white;
+  }
   
 @media (max-width: 480px) {
     #table {
