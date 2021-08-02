@@ -5,7 +5,9 @@ We are creating a program that can automatically provide you with the ideal amou
 ## Notes
 You'll need python 3 to run this program
 Install the Dependencies using pip
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 Run the program using 
 ```
