@@ -2,6 +2,15 @@
 
 We are creating a program that can automatically provide you with the ideal amount of certain ETFs and bonds for you to invest with maximum returns.
 
+## Notes
+You'll need python 3 to run this program
+Install the Dependencies using pip
+```pip install -r requirements.txt```
+
+Run the program using 
+```
+python main.py
+```
 
 ## Inspiration
 As finance enthusiasts, we wanted to use our programming knowledge to help people like ourselves generate the ideal portfolio based on user preferences.
